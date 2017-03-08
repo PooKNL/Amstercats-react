@@ -1,12 +1,11 @@
 import React from 'react'
-import Title from './components/Title'
+import CatsContainer from './cats/CatsContainer'
 
 class App extends React.Component {
   render() {
     return (
       <div className="title-wrapper">
-        <Title content= "Welcome to Amstercats!" />
-        <Title content= "Take a look at our cats" />
+        < CatsContainer cats={ [] } />
       </div>
     )
   }
