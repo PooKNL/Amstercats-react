@@ -1,15 +1,6 @@
-# React Starter
+Amstercats-react
 
-## Installation
+About
 
-```bash
-npm install
-npm start
-open http://localhost:3000
-```
+Creating a basic React frontend for the Amstercats webapp. I will use it to integrate it with both a feathersJS api as a Rails api (seperate). This is work in progress and used to further develop my React knowledge. 
 
-
-------------------
-
-Simplified version of [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate) for the
-traineeship program.
