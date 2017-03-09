@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react'
+import LikeButton from '../components/LikeButton'
+
 
 class CatItem extends PureComponent {
   render() {
@@ -10,10 +12,13 @@ class CatItem extends PureComponent {
           <div>
             <p>{ summary }</p>
             <ul>
-              <li>{ age }</li>
-              <li>{ breed }</li>
+              <li>Age: { age }</li>
+              <li>Breed: { breed }</li>
             </ul>
           </div>
+          <footer>
+            < LikeButton />
+          </footer>
         </article>
     )
   }

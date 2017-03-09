@@ -19,7 +19,7 @@ const cats = [
     breed: 'Ragdoll'
   },
   {
-    name: 'Ard',
+    name: 'Art',
     summary: 'Q and Yores lovely little furball.',
     age: '5 years',
     breed: 'European shorthair'
