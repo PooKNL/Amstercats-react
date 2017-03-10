@@ -24,19 +24,3 @@ describe('<LikeButton />', () => {
     })
   })
 })
-
-describe('click it', () => {
-  const button = shallow(<LikeButton />)
-  it('toggles the "liked" state', () => {
-    // initial
-    expect(button.state('liked')).to.eq(false)
-
-    // first click
-    button.find('button').simulate('click')
-    expect(button.state('liked')).to.eq(true)
-
-    // second click
-    button.find('button').simulate('click')
-    expect(button.state('liked')).to.eq(false)
-  })
-})
