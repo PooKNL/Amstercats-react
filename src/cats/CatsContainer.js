@@ -1,6 +1,7 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, PropTypes } from 'react'
 import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
+import { connect } from 'react-redux'
 
 class CatsContainer extends PureComponent {
   renderCat(cat, index) {
@@ -21,4 +22,8 @@ class CatsContainer extends PureComponent {
   }
 }
 
-export default CatsContainer
+const mapStateToProps = ( { cats }) => ({
+  cats
+})
+
+export default connect(mapStateToProps)(CatsContainer)
