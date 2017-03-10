@@ -4,7 +4,7 @@ import CatsContainer from './cats/CatsContainer'
 class App extends PureComponent {
   render() {
     return (
-      <div className="title-wrapper">
+      <div className="app-wrapper">
         < CatsContainer cats={ cats } />
       </div>
     )

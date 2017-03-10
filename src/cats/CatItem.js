@@ -4,7 +4,7 @@ import LikeButton from '../components/LikeButton'
 
 class CatItem extends PureComponent {
   render() {
-    const { name, summary, age, breed } = this.props
+    const { name, summary, age, breed, liked  } = this.props
 
     return(
         <article className="cat">
@@ -17,7 +17,8 @@ class CatItem extends PureComponent {
             </ul>
           </div>
           <footer>
-            < LikeButton />
+          <LikeButton
+            liked={ liked } />
           </footer>
         </article>
     )

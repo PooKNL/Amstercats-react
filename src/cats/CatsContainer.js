@@ -9,7 +9,7 @@ class CatsContainer extends PureComponent {
 
   render() {
     return(
-      <div className="cats wrapper">
+      <div className="cats-wrapper">
         <header>
           <Title content="The Amstercats!" />
         </header>
