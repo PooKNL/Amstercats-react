@@ -19,7 +19,7 @@ class LikeButton extends PureComponent {
   }
 
   toggleLike() {
-     this.props.onChange()
+    this.props.onChange()
   }
 
   render() {

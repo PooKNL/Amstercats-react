@@ -1,6 +1,4 @@
-export default (state = cats, { type, payload } = {}) => {
-  return state
-}
+import { CREATE_CAT } from '../actions/cats/create'
 
 const cats = [
   {
@@ -36,3 +34,13 @@ const cats = [
     liked: false,
   },
 ]
+
+export default (state = cats, { type, payload } = {}) => {
+  switch(type) {
+    case CREATE_CAT :
+      return [Object.assign({}, payload)].concat(state)
+
+  default:
+    return state
+ }
+}
