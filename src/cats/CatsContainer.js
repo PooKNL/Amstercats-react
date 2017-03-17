@@ -3,6 +3,8 @@ import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
 import { connect } from 'react-redux'
 import { App } from '../App'
+import CatsEditor from '../cats/CatsEditor'
+
 
 export class CatsContainer extends PureComponent {
   renderCat(cat, index) {
@@ -17,6 +19,7 @@ export class CatsContainer extends PureComponent {
         </header>
         <main>
           { this.props.cats.map(this.renderCat) }
+          < CatsEditor />
         </main>
       </div>
     )
