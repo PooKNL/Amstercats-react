@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import CatsContainer from './cats/CatsContainer'
 import './App.sass'
+import store from './store'
 
 class App extends PureComponent {
   updateCat(id, update) {
@@ -16,8 +17,8 @@ class App extends PureComponent {
   render() {
     return (
       <div className="app">
-        < CatsContainer
-        updateCat={ this.updateCat.bind(this) } />
+          < CatsContainer
+          updateCat={ this.updateCat.bind(this) } store={ store } />
       </div>
     )
   }
