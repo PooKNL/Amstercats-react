@@ -2,6 +2,7 @@ import React, { PureComponent, PropTypes } from 'react'
 import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
 import { connect } from 'react-redux'
+import { App } from '../App'
 
 export class CatsContainer extends PureComponent {
   renderCat(cat, index) {

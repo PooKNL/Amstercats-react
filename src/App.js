@@ -3,7 +3,7 @@ import CatsContainer from './cats/CatsContainer'
 import './App.sass'
 import store from './store'
 
-class App extends PureComponent {
+export class App extends PureComponent {
   updateCat(id, update) {
 
     // Needs to be cleaned to make tests working again.
