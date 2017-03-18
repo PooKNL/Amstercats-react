@@ -4,9 +4,19 @@ import CatItem from '../cats/CatItem'
 import { connect } from 'react-redux'
 import { App } from '../App'
 import CatsEditor from '../cats/CatsEditor'
+import fetchCats from '../actions/cats/fetch'
 
 
 export class CatsContainer extends PureComponent {
+  static propTypes = {
+    cats: PropTypes.array.isRequired,
+    fetchCats: PropTypes.func.isRequired,
+  }
+
+  componentDidMount() {
+    this.props.fetchCats()
+  }
+
   renderCat(cat, index) {
     return <CatItem key={index} { ...cat } />
   }
@@ -28,4 +38,4 @@ export class CatsContainer extends PureComponent {
 
 const mapStateToProps = ( { cats }) => ({ cats })
 
-export default connect(mapStateToProps)(CatsContainer)
+export default connect(mapStateToProps, { fetchCats })(CatsContainer)
