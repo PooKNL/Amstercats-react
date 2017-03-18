@@ -1,6 +1,7 @@
 import { CREATE_CAT } from '../actions/cats/create'
+import { FETCHED_CATS } from '../actions/cats/fetch'
 
-const cats = [
+const dummyData = [
   {
     _id: 'abcd123',
     name: 'Wally',
@@ -35,8 +36,11 @@ const cats = [
   },
 ]
 
-export default (state = cats, { type, payload } = {}) => {
+export default (state = dummyData, { type, payload } = {}) => {
   switch(type) {
+    case FETCHED_CATS :
+      return [].concat(payload)
+
     case CREATE_CAT :
       return [Object.assign({}, payload)].concat(state)
 
