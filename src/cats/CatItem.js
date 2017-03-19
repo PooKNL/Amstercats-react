@@ -1,5 +1,7 @@
 import React, { PureComponent } from 'react'
 import LikeButton from '../components/LikeButton'
+import { connect } from 'react-redux'
+import { link } from 'react-router'
 import './CatItem.scss'
 
 class CatItem extends PureComponent {
@@ -12,6 +14,7 @@ class CatItem extends PureComponent {
             <div className="header">
               <h1>{ name }</h1>
               <img src={ photo } />
+              <h1> <Link to={`/cats/${_id}`}>{ name }</Link> </h1>
             </div>
           </header>
           <main>

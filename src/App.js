@@ -12,13 +12,10 @@ export class App extends PureComponent {
     }
   }
 
-
-
   render() {
     return (
       <div className="app">
-          < CatsContainer
-          updateCat={ this.updateCat.bind(this) } store={ store } />
+        { this.props.children }
       </div>
     )
   }
@@ -26,3 +23,7 @@ export class App extends PureComponent {
 
 
 export default App
+
+// -Below code replaced with children from Index-
+// < CatsContainer
+// updateCat={ this.updateCat.bind(this) } store={ store } />
