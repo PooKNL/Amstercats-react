@@ -1,0 +1,10 @@
+div.cats-profiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 10px;
+  align-items: center;
+  flex-flow: row;
+  flex-wrap: wrap;
+  flex: 1;
+}

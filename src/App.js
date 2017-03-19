@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import CatsContainer from './cats/CatsContainer'
-import './App.sass'
+import './App.scss'
 import store from './store'
 
 export class App extends PureComponent {
