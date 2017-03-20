@@ -1,12 +1,12 @@
 import React, { PureComponent } from 'react'
 import LikeButton from '../components/LikeButton'
 import { connect } from 'react-redux'
-import { link } from 'react-router'
+import { Link } from 'react-router'
 import './CatItem.scss'
 
 class CatItem extends PureComponent {
   render() {
-    const { name, summary, age, breed, liked, photo  } = this.props
+    const { _id, name, summary, age, breed, liked, photo  } = this.props
 
     return(
         <article className="cat">
