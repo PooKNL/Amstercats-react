@@ -12,7 +12,7 @@ export class CatPage extends PureComponent {
   render() {
     return(
       <div className="Profile page">
-        <p> PLACEHOLDER KAT PROFIEL </p>
+        <p> PLACEHOLDER CAT PROFILE </p>
       </div>
     )
   }
