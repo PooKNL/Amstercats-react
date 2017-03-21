@@ -1,16 +1,24 @@
 article {
   border-style: solid;
-  border-color: black;
-  max-width: 300px;
+  border-color: #ff751a;
+  width: 200px;
+  height: 500px;
+  overflow: hidden;
   padding: 8px;
+  border-radius: 5%;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 img {
   max-width: 200px;
   max-height: 200px;
   border-radius: 5%;
-  }
+}
 
 div.header {
     text-align: center;
-  }
+}
+
+footer {
+  padding: 10px 20px;
+}
