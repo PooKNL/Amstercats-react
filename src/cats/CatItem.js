@@ -12,19 +12,18 @@ class CatItem extends PureComponent {
         <article className="cat">
           <header>
             <div className="header">
-              <h1>{ name }</h1>
               <img src={ photo } />
               <h1> <Link to={`/cats/${_id}`}>{ name }</Link> </h1>
             </div>
           </header>
           <main>
             <p>{ summary }</p>
+          </main>
+          <footer>
             <ul>
               <li>Age: { age }</li>
               <li>Breed: { breed }</li>
-            </ul>
-          </main>
-          <footer>
+              </ul>
             <LikeButton
               liked={ liked } />
           </footer>

@@ -1,6 +1,8 @@
 import React, { PureComponent, PropTypes } from 'react'
 import { connect } from 'react-redux'
 import fetchCats from '../actions/cats/fetch'
+import Title from '../components/Title'
+import CatItem from '../cats/CatItem'
 
 export class CatPage extends PureComponent {
   static propTypes = {}
@@ -9,10 +11,17 @@ export class CatPage extends PureComponent {
     this.props.fetchCats()
   }
 
+  renderCat(cat, index) {
+    return <CatItem key={index} { ...cat } />
+  }
+
   render() {
+    const { title } = this.props
+
     return(
       <div className="Profile page">
-        <p> PLACEHOLDER CAT PROFILE </p>
+        <h1> Cat Profile </h1>
+        < CatItem />
       </div>
     )
   }
