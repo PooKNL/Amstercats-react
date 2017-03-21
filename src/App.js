@@ -1,29 +1,34 @@
 import React, { PureComponent } from 'react'
-import CatsContainer from './cats/CatsContainer'
-import './App.scss'
-import store from './store'
+import Loading from './components/Loading'
+import LoadError from './components/LoadError'
+import Navigation from './components/Navigation'
+import './App.sass'
 
-export class App extends PureComponent {
-  updateCat(id, update) {
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import muiTheme from './assets/styles/theme'
 
-    // Needs to be cleaned to make tests working again.
-    this.state = {
-      cats
-    }
+class App extends PureComponent {
+  static childContextTypes = {
+    muiTheme: React.PropTypes.object.isRequired,
+  }
+
+  getChildContext() {
+    return { muiTheme }
   }
 
   render() {
     return (
-      <div className="app">
-        { this.props.children }
-      </div>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <div className="app">
+          <Navigation />
+          <Loading />
+          { this.props.children }
+          <LoadError />
+        </div>
+      </MuiThemeProvider>
     )
   }
 }
 
 
 export default App
-
-// -Below code replaced with children from Index-
-// < CatsContainer
-// updateCat={ this.updateCat.bind(this) } store={ store } />

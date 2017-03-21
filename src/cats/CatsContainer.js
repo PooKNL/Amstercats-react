@@ -26,7 +26,7 @@ export class CatsContainer extends PureComponent {
     return(
       <div className="cats-wrapper">
         <header>
-          <Title content="The Amstercats!" />
+          <Title content="Cats from Amsterdam" />
           <div className="intro">
             <p> A prototype website for my (mostly female =) ) friends
             who adore cats. A user can create and modify profiles for their own
