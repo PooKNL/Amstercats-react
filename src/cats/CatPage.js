@@ -11,10 +11,6 @@ export class CatPage extends PureComponent {
     this.props.fetchCats()
   }
 
-  renderCat(cat, index) {
-    return <CatItem key={index} { ...cat } />
-  }
-
   render() {
     const { title } = this.props
 

@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { App } from '../App'
 import CatsEditor from '../cats/CatsEditor'
 import fetchCats from '../actions/cats/fetch'
+import SignIn from '../users/SignIn'
 import './CatsContainer.scss'
 
 
@@ -31,6 +32,9 @@ export class CatsContainer extends PureComponent {
             <p> A prototype website for my (mostly female =) ) friends
             who adore cats. A user can create and modify profiles for their own
             cats and share pictures with friends. </p>
+          </div>
+          <div className="SignIn">
+            < SignIn />
           </div>
         </header>
         <main>
