@@ -4,7 +4,7 @@ import { history } from '../store'
 import signOut from '../actions/user/sign-out'
 import AppBar from 'material-ui/AppBar'
 import IconButton from 'material-ui/IconButton'
-import LocalDining from 'material-ui/svg-icons/maps/local-dining'
+import LocalDining from 'material-ui/svg-icons/maps/navigation'
 import FlatButton from 'material-ui/FlatButton'
 
 export class Navigation extends PureComponent {
