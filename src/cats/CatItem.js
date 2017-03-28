@@ -32,10 +32,5 @@ class CatItem extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ currentUser }) => {
-  return {
-    currentUser
-  }
-}
 
-export default connect(mapStateToProps)(CatItem)
+export default CatItem

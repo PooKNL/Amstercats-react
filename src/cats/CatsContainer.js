@@ -19,7 +19,7 @@ export class CatsContainer extends PureComponent {
     this.props.fetchCats()
   }
 
-  renderCat(cat, index) {
+  renderCats(cat, index) {
     return <CatItem key={index} { ...cat } />
   }
 
@@ -42,7 +42,7 @@ export class CatsContainer extends PureComponent {
         <div className="main-wrapper">
           <main>
             <div className="cats-profiles">
-              { this.props.cats.map(this.renderCat) }
+              { this.props.cats.map(this.renderCats) }
             </div>
             <div className="editor">
               <h2> Add your own Amstercat </h2>

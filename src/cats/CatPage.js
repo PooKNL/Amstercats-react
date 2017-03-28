@@ -12,13 +12,18 @@ export class CatPage extends PureComponent {
     this.props.fetchCats()
   }
 
+  renderCat(cat, id) {
+    const { _id } = params.catId
+    return <CatItem key={ _id } { ...cat } />
+  }
+
   render() {
-    const { title } = this.props
+    const cat = this.renderCat
 
     return(
       <div className="Profile page">
         <h1> Cat Profile </h1>
-        < CatItem />
+        < CatItem { cat } />
       </div>
     )
   }
