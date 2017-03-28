@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import fetchCats from '../actions/cats/fetch'
 import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
+import Gallery from '../components/Gallery'
 
 export class CatPage extends PureComponent {
   static propTypes = {}
