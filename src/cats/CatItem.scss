@@ -1,10 +1,13 @@
 article {
   border-style: solid;
   border-color: #ff751a;
-  width: 200px;
-  height: 500px;
+  box-sizing: border-box;
+  flex-basis: 20%;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
   overflow: hidden;
-  padding: 8px;
+  padding: 12px;
   border-radius: 5%;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
 }

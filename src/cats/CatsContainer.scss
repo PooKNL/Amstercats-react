@@ -1,15 +1,43 @@
-div.cats-profiles {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: row;
-  flex-wrap: wrap;
-  flex: 1;
-  margin: 1em;
+div.page-wrapper {
+
 }
 
-div.SignIn {
+div.header-wrapper {
+
+}
+
+div.intro-wrapper {
+
+}
+
+div.sign-in {
+
+}
+
+div.main-wrapper {
+
+}
+
+
+div.cats-profiles {
+  flex-direction: row;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+}
+
+div.sign-in {
   position: relative;
   left: 20px;
+}
+
+div.editor {
+
+}
+
+@media (min-width: 900px) {
+  div.cats-profiles {
+    display: flex;
+    justify-content: space-between;
+  }
 }

@@ -25,25 +25,31 @@ export class CatsContainer extends PureComponent {
 
   render() {
     return(
-      <div className="cats-wrapper">
-        <header>
-         <Title content="Welcome to the lovely cats of Amsterdam!" />
-          <div className="intro">
-            <p> A prototype website for my (mostly female =) ) friends
-            who adore cats. A user can create and modify profiles for their own
-            cats and share pictures with friends. </p>
-          </div>
-          <div className="SignIn">
-            < SignIn />
-          </div>
-        </header>
-        <main>
-          <div className="cats-profiles">
-            { this.props.cats.map(this.renderCat) }
-          </div>
-            <h2> Add your own Amstercat </h2>
-            < CatsEditor />
-        </main>
+      <div className="page-wrapper">
+        <div className="header-wrapper">
+          <header>
+            <div className="intro-wrapper">
+              <Title content="Welcome to the lovely cats of Amsterdam!" />
+                <p> A prototype website for my (mostly female =) ) friends
+                who adore cats. A user can create and modify profiles for their own
+                cats and share pictures with friends. </p>
+            </div>
+            <div className="sign-in">
+              < SignIn />
+            </div>
+          </header>
+        </div>
+        <div className="main-wrapper">
+          <main>
+            <div className="cats-profiles">
+              { this.props.cats.map(this.renderCat) }
+            </div>
+            <div className="editor">
+              <h2> Add your own Amstercat </h2>
+              < CatsEditor />
+            </div>
+          </main>
+        </div>
       </div>
     )
   }
