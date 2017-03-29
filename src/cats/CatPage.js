@@ -4,6 +4,7 @@ import fetchCats from '../actions/cats/fetch'
 import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
 import Gallery from '../components/Gallery'
+import CatsEditor from '../cats/CatsEditor'
 import './catpage.scss'
 
 export class CatPage extends PureComponent {
@@ -15,16 +16,27 @@ export class CatPage extends PureComponent {
 
   render() {
     return(
-      <div className="profile-wrapper">
-        <div className="profile-article">
-          <h1> {this.props.name} </h1>
-          < CatItem age={this.props.age} breed={this.props.breed}
-          photo={this.props.photo} summary={this.props.summary}
-           />
-        </div>
-        <div className="gallery">
-            <h1> Personal photos {this.props.name} </h1>
-        </div>
+      <div className="page-wrapper">
+          <div className="profile-wrapper">
+            <div className="profile-article">
+              <h1> {this.props.name} </h1>
+              < CatItem age={this.props.age} breed={this.props.breed}
+              profilephoto={this.props.profilephoto} summary={this.props.summary}
+               />
+            </div>
+            <div className="gallery">
+                <h1> Personal photos {this.props.name} </h1>
+                <div className="photos">
+                <img src={ this.props.photo1 } />
+                <img src={ this.props.photo2 } />
+                <img src={ this.props.photo3 } />
+                </div>
+            </div>
+          </div>
+          <div className="cats-editor">
+          <h1> Cat Editor </h1>
+            < CatsEditor />
+          </div>
       </div>
     )
   }
