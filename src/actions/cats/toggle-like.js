@@ -2,8 +2,8 @@ import API from '../../middleware/api'
 const api = new API()
 const cats = api.service('cats')
 
-export default (cats, user) => {
-  const liked = cats.likedBy.filter((like) => (like === user._id)).length > 0
+export default (cat, user) => {
+  const liked = cat.likedBy.filter((like) => (like === user._id)).length > 0
 
   api.app.authenticate()
     .then(() => {

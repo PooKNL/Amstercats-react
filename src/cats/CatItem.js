@@ -1,12 +1,29 @@
-import React, { PureComponent } from 'react'
+import React, { PureComponent, PropTypes } from 'react'
 import LikeButton from '../components/LikeButton'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
+import toggleLikeAction from '../actions/cats/toggle-like'
 import './CatItem.scss'
 
-class CatItem extends PureComponent {
+export class CatItem extends PureComponent {
+  static propTypes = {
+    _id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    profilephoto: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
+    toggleLikeAction: PropTypes.func.isRequired,
+  }
+
+  toggleLike() {
+    const { _id, likedBy, currentUser } = this.props
+      if (!currentUser) return
+
+      console.log('CLICK (CatItem)', _id)
+      this.props.toggleLikeAction({ _id, likedBy }, currentUser)
+  }
+
   render() {
-    const { _id, name, summary, age, breed, liked, profilephoto  } = this.props
+    const { _id, name, summary, age, breed, liked, likedBy, profilephoto  } = this.props
 
     return(
         <article className="cat">
@@ -24,13 +41,21 @@ class CatItem extends PureComponent {
               <li>Age: { age }</li>
               <li>Breed: { breed }</li>
               </ul>
-            <LikeButton
-              liked={ liked } />
+              <LikeButton
+                liked={ liked }
+                likes={ likedBy.length }
+                onChange={ this.toggleLike.bind(this) } />
           </footer>
         </article>
     )
   }
 }
 
+const mapStateToProps = ({ currentUser }, { likedBy }) => {
+  return {
+    currentUser,
+    liked: likedBy.filter((like) => (like === (currentUser && currentUser._id))).length > 0
+  }
+}
 
-export default CatItem
+export default connect(mapStateToProps, { toggleLikeAction })(CatItem)
