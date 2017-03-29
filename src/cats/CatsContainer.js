@@ -20,7 +20,7 @@ export class CatsContainer extends PureComponent {
   }
 
   renderCats(cat, index) {
-    return <CatItem key={index} { ...cat } />
+    return <CatItem key={index} { ...cat } liked={ false } />
   }
 
   render() {
