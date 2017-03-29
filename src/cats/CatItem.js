@@ -6,13 +6,13 @@ import './CatItem.scss'
 
 class CatItem extends PureComponent {
   render() {
-    const { _id, name, summary, age, breed, liked, photo  } = this.props
+    const { _id, name, summary, age, breed, liked, profilephoto  } = this.props
 
     return(
         <article className="cat">
           <header>
             <div className="header">
-              <img src={ photo } />
+              <img src={ profilephoto } />
               <h1> <Link to={`/cats/${_id}`}>{ name }</Link> </h1>
             </div>
           </header>

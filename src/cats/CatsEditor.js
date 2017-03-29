@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import createCat from '../actions/cats/create'
 import 'medium-editor/dist/css/medium-editor.css'
 import 'medium-editor/dist/css/themes/default.css'
-import './CatEditor.sass'
+import './CatsEditor.sass'
 
 class CatEditor extends PureComponent {
   constructor(props) {
