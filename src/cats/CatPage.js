@@ -4,6 +4,7 @@ import fetchCats from '../actions/cats/fetch'
 import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
 import Gallery from '../components/Gallery'
+import './catpage.scss'
 
 export class CatPage extends PureComponent {
   static propTypes = {}
@@ -12,18 +13,18 @@ export class CatPage extends PureComponent {
     this.props.fetchCats()
   }
 
-  renderCat(cat, id) {
-    const { _id } = params.catId
-    return <CatItem key={ _id } { ...cat } />
-  }
-
   render() {
-    const cat = this.renderCat
-
     return(
-      <div className="Profile page">
-        <h1> Cat Profile </h1>
-        < CatItem { cat } />
+      <div className="profile-wrapper">
+        <div className="profile-article">
+          <h1> {this.props.name} </h1>
+          < CatItem age={this.props.age} breed={this.props.breed}
+          photo={this.props.photo} summary={this.props.summary}
+           />
+        </div>
+        <div className="gallery">
+            <h1> Personal photos {this.props.name} </h1>
+        </div>
       </div>
     )
   }
