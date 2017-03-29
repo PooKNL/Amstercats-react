@@ -19,5 +19,7 @@ Creating a basic React frontend for the Amstercats webapp. I will use it to inte
 
 This is a personal project aimed at improving my understanding of React and using Chai/Enzyme for testing. I started from the ground up without Redux to make a static frontend only based on state. Later on added props, Redux(store) and reducers. This is on hold until after my holiday. After that my focus will be on making a prototype of the website in React and then integrating it with the backend.  
 
+My first goal is to have a working prototype focused on features and functionality. Styling/design will be the focus after that.
+
 
 
