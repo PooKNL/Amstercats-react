@@ -12,14 +12,16 @@ const grey         = '#DEDEDE'
 const grey50       = 'rgba(222, 222, 222, 0.5)'
 const grey30       = 'rgba(222, 222, 222, 0.7)'
 const orange       = '#ff751a'
+const sky          = '#7CDBD5'
+const funky        = '#F53240'
 
 // Palette
 export const palette = {
-  primary1Color: orange,
+  primary1Color: black,
   primary2Color: green,
   primary3Color: green,
   accent1Color: green,
-  textColor: black,
+  textColor: white,
   alternateTextColor: white,
   canvasColor: white,
   borderColor: grey,

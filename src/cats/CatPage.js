@@ -4,7 +4,6 @@ import fetchCats from '../actions/cats/fetch'
 import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
 import Gallery from '../components/Gallery'
-import CatsEditor from '../cats/CatsEditor'
 import './catpage.scss'
 
 export class CatPage extends PureComponent {
@@ -20,7 +19,7 @@ export class CatPage extends PureComponent {
           <div className="profile-wrapper">
 
             <div className="profile-article">
-              <h1> {this.props.name} </h1>
+              <h1 className="name"> {this.props.name} </h1>
               < CatItem age={this.props.age} breed={this.props.breed}
               profilephoto={this.props.profilephoto} summary={this.props.summary}
                />
@@ -34,11 +33,6 @@ export class CatPage extends PureComponent {
                 <img src={ this.props.photo3 } />
                 </div>
             </div>
-          </div>
-
-          <div className="cats-editor">
-            <h1> Cat Editor </h1>
-            < CatsEditor />
           </div>
       </div>
     )

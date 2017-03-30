@@ -28,23 +28,39 @@ export class CatsContainer extends PureComponent {
     return(
       <div className="page-wrapper">
           <header>
-            <div className="intro-wrapper">
-              <Title content="Welcome to the lovely cats of Amsterdam!" />
-                <p> A prototype website for my (mostly female =) ) friends
-                who adore cats. A user can create and modify profiles for their own
-                cats and share pictures with friends. </p>
-            </div>
+
+              <div className="intro-week-wrapper">
+                <div className="intro-text">
+                    <Title content="Welcome to the lovely cats of Amsterdam!" />
+                    <p> A prototype website for my (mostly female =) ) friends
+                    who adore cats. A user can create and modify profiles for their own
+                    cats and share pictures with friends. </p>
+                    <ul>
+                      <li> Add your own cat profile to the site </li>
+                      <li> Upload pictures of your cat  </li>
+                      <li> Enjoy beautiful pictures of other cats </li>
+                      <li> And like, like, like! </li>
+                    </ul>
+                </div>
+                <div className="week-cat">
+                  <h1> Cat of the week! </h1>
+                  <img src='http://res.cloudinary.com/daahasvbo/image/upload/v1490779894/Wally4_xyl8zr.jpg' />
+                  <h2> Wally </h2>
+                </div>
+              </div>
           </header>
 
           <main>
             <div className="main-wrapper">
-
+              <div className="profile-title">
+                <Title content="AmsterCats Profiles" />
+              </div>
               <div className="cats-profiles">
-              { this.props.cats.map(this.renderCats) }
+                { this.props.cats.map(this.renderCats) }
               </div>
               <div className="editor">
-              <h2> Add your own Amstercat </h2>
-              < CatsEditor />
+                <h2> Add your own Amstercat </h2>
+                < CatsEditor />
               </div>
             </div>
           </main>
