@@ -27,16 +27,25 @@ export class CatItem extends PureComponent {
         <article className="cat">
           <header>
             <div className="header">
-              <img src={ profilephoto } />
-              <h1> <Link to={`/cats/${_id}`}>{ name }</Link> </h1>
+              <div className="photo-stats">
+                <div className="profile-photo">
+                  <img src={ profilephoto } />
+                </div>
+                <div className="stats">
+                  <h3> <Link to={`/cats/${_id}`}>{ name }</Link> </h3>
+                  <ul>
+                    <p> <strong> Age: </strong>  { age }</p>
+                    <p> <strong> Breed: </strong> { breed }</p> 
+                  </ul>
+                </div>
+              </div>
+
             </div>
           </header>
           <main>
+            <h3> Bio: </h3>
             <p>{ summary }</p>
-              <ul>
-                <li>Age: { age }</li>
-                <li>Breed: { breed }</li>
-              </ul>
+
           </main>
           <footer>
               <LikeButton

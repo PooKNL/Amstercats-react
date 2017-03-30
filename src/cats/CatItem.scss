@@ -1,11 +1,12 @@
-article {
+article.cat {
   border-style: solid;
   border-color: #ff751a;
   box-sizing: border-box;
-  flex-basis: 25%;
-  margin-bottom: 30px;
-  margin-right: 40px;
-  margin-left: 40px;
+  flex-basis: 35%;
+  margin-bottom: 50px;
+  margin-right: 80px;
+  margin-left: 80px;
+  margin-top: 30px;
   color: black;
   text-size: 125%;
   overflow: hidden;
@@ -22,9 +23,19 @@ img {
 }
 
 div.header {
-    text-align: center;
+  text-align: center;
 }
 
 footer {
   padding: 10px 20px;
+}
+
+div.stats {
+  align-items: center;
+}
+
+div.photo-stats {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
