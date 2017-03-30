@@ -3,9 +3,9 @@ import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
 import { connect } from 'react-redux'
 import { App } from '../App'
+import subscribeToCatsService from '../actions/cats/subscribe'
 import CatsEditor from '../cats/CatsEditor'
 import fetchCats from '../actions/cats/fetch'
-import SignIn from '../users/SignIn'
 import './CatsContainer.scss'
 
 
@@ -17,6 +17,7 @@ export class CatsContainer extends PureComponent {
 
   componentDidMount() {
     this.props.fetchCats()
+    this.props.subscribeToCatsService()
   }
 
   renderCats(cat, index) {
@@ -26,7 +27,6 @@ export class CatsContainer extends PureComponent {
   render() {
     return(
       <div className="page-wrapper">
-        <div className="header-wrapper">
           <header>
             <div className="intro-wrapper">
               <Title content="Welcome to the lovely cats of Amsterdam!" />
@@ -34,22 +34,20 @@ export class CatsContainer extends PureComponent {
                 who adore cats. A user can create and modify profiles for their own
                 cats and share pictures with friends. </p>
             </div>
-            <div className="sign-in">
-              < SignIn />
-            </div>
           </header>
-        </div>
-        <div className="main-wrapper">
+
           <main>
-            <div className="cats-profiles">
+            <div className="main-wrapper">
+
+              <div className="cats-profiles">
               { this.props.cats.map(this.renderCats) }
-            </div>
-            <div className="editor">
+              </div>
+              <div className="editor">
               <h2> Add your own Amstercat </h2>
               < CatsEditor />
+              </div>
             </div>
           </main>
-        </div>
       </div>
     )
   }
@@ -57,4 +55,4 @@ export class CatsContainer extends PureComponent {
 
 const mapStateToProps = ( { cats }) => ({ cats })
 
-export default connect(mapStateToProps, { fetchCats })(CatsContainer)
+export default connect(mapStateToProps, { fetchCats, subscribeToCatsService })(CatsContainer)

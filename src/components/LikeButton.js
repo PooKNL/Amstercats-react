@@ -6,20 +6,20 @@ import HeartRed from '../images/heart-cat-red.svg'
 class LikeButton extends PureComponent {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
-    liked: PropTypes.bool.isRequired,
+    // liked: PropTypes.bool.isRequired,
   }
 
   classNames() {
     const { liked } = this.props
     let classes = 'like'
 
-    if (liked) { classes += 'liked' }
+    if (liked) { classes += ' liked' }
 
     return classes
-    }
+  }
 
   toggleLike() {
-    console.log('CLICK LikeButton')
+    console.log('CLICK (LikeButton)')
     this.props.onChange()
   }
 
@@ -27,13 +27,13 @@ class LikeButton extends PureComponent {
     const { liked, likes } = this.props
     const likesOtherThanYours = (likes || 0) - 1
 
-    if (liked && likesOtherThanYours > 0 ) {
-      return 'You and ${likesOtherThanYours} others like this AmsterCat'
+    if (liked && likesOtherThanYours > 0) {
+      return `You and ${likesOtherThanYours} others like this`
     }
 
-    if (liked) return 'You like this AmsterCat'
+    if (liked) return 'You like this'
 
-    if (likes > 0) return '${likes} others like this Amstercat'
+    if (likes > 0) return `${likes} others like this`
 
     return null
   }
@@ -41,15 +41,15 @@ class LikeButton extends PureComponent {
   render() {
     const { liked } = this.props
     return (
-      <div className={ this.classNames() }>
+      <p className={ this.classNames() }>
         <button onClick={ this.toggleLike.bind(this) }>
           <img className="heart" src={ liked ? HeartRed : HeartGrey } />
           <span className="copy">
             <img className="heart" src={ liked ? HeartRed : HeartGrey } />
           </span>
         </button>
-        <span className="likes">{ liked ? 'You like this' : null }</span>
-      </div>
+        <span className="likes">{this.likeStatus()}</span>
+      </p>
     )
   }
 }

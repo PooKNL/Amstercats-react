@@ -7,20 +7,18 @@ import './CatItem.scss'
 
 export class CatItem extends PureComponent {
   static propTypes = {
-    _id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    profilephoto: PropTypes.string.isRequired,
-    summary: PropTypes.string.isRequired,
-    toggleLikeAction: PropTypes.func.isRequired,
+    // _id: PropTypes.string.isRequired,
+    // // profilephoto: PropTypes.string.isRequired,
+    // summary: PropTypes.string.isRequired,
+    // toggleLikeAction: PropTypes.func.isRequired,
   }
 
   toggleLike() {
     const { _id, likedBy, currentUser } = this.props
-      if (!currentUser) return
-
-      console.log('CLICK (CatItem)', _id)
-      this.props.toggleLikeAction({ _id, likedBy }, currentUser)
+    console.log('CLICK (CatItem)', _id)
+    this.props.toggleLikeAction({ _id, likedBy }, currentUser)
   }
+
 
   render() {
     const { _id, name, summary, age, breed, liked, likedBy, profilephoto  } = this.props
@@ -35,15 +33,15 @@ export class CatItem extends PureComponent {
           </header>
           <main>
             <p>{ summary }</p>
+              <ul>
+                <li>Age: { age }</li>
+                <li>Breed: { breed }</li>
+              </ul>
           </main>
           <footer>
-            <ul>
-              <li>Age: { age }</li>
-              <li>Breed: { breed }</li>
-              </ul>
               <LikeButton
                 liked={ liked }
-                likes={ likedBy.length }
+                // likes={ likedBy.length } FIX likedBy bug
                 onChange={ this.toggleLike.bind(this) } />
           </footer>
         </article>
@@ -54,7 +52,7 @@ export class CatItem extends PureComponent {
 const mapStateToProps = ({ currentUser }, { likedBy }) => {
   return {
     currentUser,
-    liked: likedBy.filter((like) => (like === (currentUser && currentUser._id))).length > 0
+    // liked: likedBy.filter((like) => (like === (currentUser && currentUser._id))).length > 0 FIX likedBy bug
   }
 }
 
