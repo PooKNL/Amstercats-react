@@ -1,21 +1,52 @@
+
+
 div.page-wrapper {
-
+  color: white;
 }
 
-div.header-wrapper {
 
+div.intro-week-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-div.intro-wrapper {
-
+div.intro-text {
+  font-size: 150%;
+  flex-basis: 70%;
 }
 
-div.sign-in {
-
+div.editor {
+  margin: 0 auto;
 }
+
+div.week-cat {
+  align-items: center;
+  border-style: solid;
+  border-color: #ff751a;
+  box-sizing: border-box;
+  margin-top: 20px;
+  margin-right: 40px;
+  width: 300px;
+  height: 400px;
+  text-size: 125%;
+  overflow: hidden;
+  padding: 12px;
+  border-radius: 5%;
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.50);
+  color: white;
+  text-align: center;
+}
+
+div.profile-title {
+  text-align: center;
+  margin: 0 auto;
+  color: white;
+}
+
 
 div.main-wrapper {
-
+  margin-top: 120px;
 }
 
 
@@ -29,10 +60,6 @@ div.cats-profiles {
 div.sign-in {
   position: relative;
   left: 20px;
-}
-
-div.editor {
-
 }
 
 @media (min-width: 900px) {
