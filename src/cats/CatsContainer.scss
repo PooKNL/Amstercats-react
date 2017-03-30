@@ -55,6 +55,8 @@ div.cats-profiles {
   flex-direction: row;
   align-items: stretch;
   flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
 
 }
 
