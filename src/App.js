@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react'
 import Loading from './components/Loading'
 import LoadError from './components/LoadError'
 import Navigation from './components/Navigation'
+import Footer from './components/footer'
 import './App.sass'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -24,6 +25,7 @@ class App extends PureComponent {
           <Loading />
           { this.props.children }
           <LoadError />
+          <Footer />
         </div>
       </MuiThemeProvider>
     )
