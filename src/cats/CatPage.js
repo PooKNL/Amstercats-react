@@ -18,12 +18,14 @@ export class CatPage extends PureComponent {
     return(
       <div className="page-wrapper">
           <div className="profile-wrapper">
+
             <div className="profile-article">
               <h1> {this.props.name} </h1>
               < CatItem age={this.props.age} breed={this.props.breed}
               profilephoto={this.props.profilephoto} summary={this.props.summary}
                />
             </div>
+
             <div className="gallery">
                 <h1> Personal photos {this.props.name} </h1>
                 <div className="photos">
@@ -33,8 +35,9 @@ export class CatPage extends PureComponent {
                 </div>
             </div>
           </div>
+
           <div className="cats-editor">
-          <h1> Cat Editor </h1>
+            <h1> Cat Editor </h1>
             < CatsEditor />
           </div>
       </div>

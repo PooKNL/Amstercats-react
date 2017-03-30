@@ -5,7 +5,7 @@ export const SET_CURRENT_CAT = 'SET_CURRENT_CAT'
 const api = new API()
 const currentCat = api.service('cats')
 
-const CURRENT_USER_KEY = 'recipes.currentUser'
+const CURRENT_USER_KEY = 'cats.currentUser'
 
 const initialState = JSON.parse(localStorage.getItem(CURRENT_USER_KEY))
 
