@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import fetchCats from '../actions/cats/fetch'
 import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
-import Gallery from '../components/Gallery'
+import BasicGallery from '../components/BasicGallery'
 import './catpage.scss'
 
 export class CatPage extends PureComponent {
@@ -14,27 +14,20 @@ export class CatPage extends PureComponent {
   }
 
   render() {
+    const { cat, name, age, breed, profilephoto, summary, photo1, photo2, photo3 } = this.props
     return(
-      <div className="page-wrapper">
-          <div className="profile-wrapper">
-
-            <div className="profile-article">
-              <h1 className="name"> {this.props.name} </h1>
-              < CatItem age={this.props.age} breed={this.props.breed}
-              profilephoto={this.props.profilephoto} summary={this.props.summary}
-               />
-            </div>
-
-            <div className="gallery">
-                <h1> Personal photos {this.props.name} </h1>
-                <div className="photos">
-                <img src={ this.props.photo1 } />
-                <img src={ this.props.photo2 } />
-                <img src={ this.props.photo3 } />
-                </div>
-            </div>
+        <div className="profile-wrapper">
+          <div className="profile-article">
+            <h1 className="name"> {name} </h1>
+            < CatItem age={age} breed={breed}
+            profilephoto={profilephoto} summary={summary}
+            />
           </div>
-      </div>
+          <div className="profile-gallery">
+            < BasicGallery name={name} photo1={photo1} photo2={photo2}
+            photo3={photo3} />
+          </div>
+        </div>
     )
   }
 }

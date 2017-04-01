@@ -35,7 +35,8 @@ export class CatItem extends PureComponent {
                   <h3> <Link to={`/cats/${_id}`}>{ name }</Link> </h3>
                   <ul>
                     <p> <strong> Age: </strong>  { age }</p>
-                    <p> <strong> Breed: </strong> { breed }</p> 
+                    <p> <strong> Breed: </strong> { breed }</p>
+                    <p> <strong> Origin: </strong> Amsterdam, Netherlands </p>
                   </ul>
                 </div>
               </div>
