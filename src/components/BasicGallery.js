@@ -8,15 +8,27 @@ export class BasicGallery extends PureComponent {
     const { name, photo1, photo2, photo3, photo4, photo5, photo6} = this.props
 
     return(
-      <div className="gallery">
+      <div className="gallery-container">
           <h1> Personal photos {name} </h1>
           <div className="photos">
-          <img src={ photo1 } />
-          <img src={ photo2 } />
-          <img src={ photo3 } />
-          <img src={ photo4 } />
-          <img src={ photo5 } />
-          <img src={ photo6 } />
+            <div className="photo1">
+              <img src={ photo1 } />
+            </div>
+            <div className="photo2">
+              <img src={ photo2 } />
+            </div>
+            <div className="photo3">
+              <img src={ photo3 } />
+            </div>
+            <div className="photo4">
+              <img src={ photo4 } />
+            </div>
+            <div className="photo5">
+              <img src={ photo5 } />
+            </div>
+            <div className="photo6">
+              <img src={ photo6 } />
+            </div>
           </div>
       </div>
     )

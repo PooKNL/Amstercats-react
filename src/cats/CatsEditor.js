@@ -79,7 +79,7 @@ class CatEditor extends PureComponent {
           type="text"
           ref="name"
           className="name"
-          placeholder="Name"
+          placeholder="Your cat's name"
           defaultValue={this.state.name}
           onChange={this.updateName.bind(this)}
           onKeyDown={this.updateName.bind(this)} />
@@ -105,7 +105,7 @@ class CatEditor extends PureComponent {
           type="text"
           ref="photo"
           className="photo"
-          placeholder="Photo URL"
+          placeholder="Place a valid url of a profile photo of your cat."
           defaultValue={this.state.photo}
           onChange={this.updatePhoto.bind(this)}
           onKeyDown={this.updatePhoto.bind(this)} />
