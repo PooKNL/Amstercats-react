@@ -1,6 +1,8 @@
 import React, { PureComponent, PropTypes } from 'react'
 import Title from '../components/Title'
 import CatItem from '../cats/CatItem'
+import CatIntro from '../cats/CatIntro'
+import WeekCat from '../cats/WeekCat'
 import { connect } from 'react-redux'
 import { App } from '../App'
 import subscribeToCatsService from '../actions/cats/subscribe'
@@ -28,28 +30,11 @@ export class CatsContainer extends PureComponent {
     return(
       <div className="page-wrapper">
           <header>
-
-              <div className="intro-week-wrapper">
-                <div className="intro-text">
-                    <Title content="Welcome to the lovely cats of Amsterdam!" />
-                    <p> A prototype website for my (mostly female =) ) friends
-                    who adore cats. A user can create and modify profiles for their own
-                    cats and share pictures with friends. </p>
-                    <ul>
-                      <li> Add your own cat profile to the site </li>
-                      <li> Upload pictures of your cat  </li>
-                      <li> Enjoy beautiful pictures of other cats </li>
-                      <li> And like, like, like! </li>
-                    </ul>
-                </div>
-                <div className="week-cat">
-                  <h1> Cat of the week! </h1>
-                  <img src='http://res.cloudinary.com/daahasvbo/image/upload/v1490779894/Wally4_xyl8zr.jpg' />
-                  <h2> Wally </h2>
-                </div>
-              </div>
+            <div className="intro-week-wrapper">
+              < CatIntro />
+              < WeekCat />
+            </div>
           </header>
-
           <main>
             <div className="main-wrapper">
               <div className="profile-title">

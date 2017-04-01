@@ -1,7 +1,7 @@
 {
-  "name": "react-transform-boilerplate",
-  "version": "1.0.0",
-  "description": "A new Webpack boilerplate with hot reloading React components, and error handling on module and component level.",
+  "name": "AmsterCats",
+  "version": "0.0.9",
+  "description": "Website to share Cat profiles and pictures",
   "scripts": {
     "clean": "rimraf dist",
     "build:webpack": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
@@ -72,6 +72,7 @@
     "react-addons-test-utils": "^15.3.2",
     "rimraf": "^2.4.3",
     "sass-loader": "^4.0.2",
+    "serve": "^1.4.0",
     "style-loader": "^0.13.1",
     "watchify": "^3.7.0",
     "webpack": "1.13.1",
@@ -79,8 +80,10 @@
     "webpack-hot-middleware": "2.12.1"
   },
   "dependencies": {
+    "axios": "^0.15.3",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "breakpoint-sass": "^2.7.1",
+    "cloudinary-react": "^1.0.1",
     "feathers-client": "^1.9.0",
     "feathers-rest": "^1.7.1",
     "jquery": "^3.0.0",
