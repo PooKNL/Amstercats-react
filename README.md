@@ -1,4 +1,4 @@
-Amstercats-react
+Amstercats-react - WORK IN PROGRESS -
 
 A site for all my friends in Amsterdam who love cats:
 
@@ -13,7 +13,7 @@ User (React):
 Admin (TBD):
 // In FeathersJS or Rails I will build the backend (with either a MongoDB or PostgresQL) and an admin tool to manage users and content.
 
-About (Work in progress)
+About
 
 Creating a basic React frontend for the Amstercats webapp. I will use it to integrate it with both a feathersJS api as a Rails api (seperate).  
 
