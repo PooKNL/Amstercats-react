@@ -1,9 +1,10 @@
-div.gallery {
+div.photos {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
   border-style: solid;
   border-color: #ff751a;
   box-sizing: border-box;
-  flex-basis: 70%;
-  height: 550px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-right: 10px;
@@ -13,4 +14,60 @@ div.gallery {
   border-radius: 5%;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
   color: white;
+  align-items: center;
+}
+
+div.gallery-container {
+    color: white;
+    flex: 1;
+}
+
+div.photo1 {
+
+  border-radius: 5%;
+  border: solid;
+  border-color: #ff751a;
+
+
+}
+
+div.photo2 {
+
+  border-radius: 5%;
+  border: solid;
+  border-color: #ff751a;
+
+}
+
+div.photo3 {
+
+  border-radius: 5%;
+  border: solid;
+  border-color: #ff751a;
+
+}
+
+div.photo4 {
+
+
+  border-radius: 5%;
+  border: solid;
+  border-color: #ff751a;
+
+}
+
+div.photo5 {
+
+  border-radius: 5%;
+  border: solid;
+  border-color: #ff751a;
+
+}
+
+div.photo6 {
+
+  border-radius: 5%;
+  border: solid;
+  border-color: #ff751a;
+
 }

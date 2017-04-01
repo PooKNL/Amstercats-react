@@ -14,7 +14,7 @@ export class CatPage extends PureComponent {
   }
 
   render() {
-    const { cat, name, age, breed, profilephoto, summary, photo1, photo2, photo3 } = this.props
+    const { cat, name, age, breed, profilephoto, summary, photo1, photo2, photo3, photo4, photo5, photo6 } = this.props
     return(
         <div className="profile-wrapper">
           <div className="profile-article">
@@ -25,7 +25,8 @@ export class CatPage extends PureComponent {
           </div>
           <div className="profile-gallery">
             < BasicGallery name={name} photo1={photo1} photo2={photo2}
-            photo3={photo3} />
+            photo3={photo3} photo4={photo4} photo5={photo5}
+            photo6={photo6} />
           </div>
         </div>
     )

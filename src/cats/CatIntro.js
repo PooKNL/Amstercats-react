@@ -18,6 +18,7 @@ export class CatIntro extends PureComponent {
                 <li> Enjoy beautiful pictures of other cats </li>
                 <li> And like, like, like! </li>
               </ul>
+                <p> <strong> Sign up, add your cat and enjoy! </strong> </p>
           </div>
     )
   }
