@@ -52,7 +52,7 @@ export class CatItem extends PureComponent {
               <LikeButton
                 liked={ liked }
                 // likes={ likedBy.length }
-                // onChange={ this.toggleLike.bind(this) }
+                onChange={ this.toggleLike.bind(this) }
                 />
           </footer>
         </article>

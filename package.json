@@ -68,7 +68,7 @@
     "json-loader": "^0.5.4",
     "mocha": "^3.1.2",
     "mocha-eslint": "^3.0.1",
-    "node-sass": "^3.10.1",
+    "node-sass": "^4.5.2",
     "react-addons-test-utils": "^15.3.2",
     "rimraf": "^2.4.3",
     "sass-loader": "^4.0.2",
