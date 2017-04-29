@@ -1,9 +1,8 @@
 div.photos {
-  flex-direction: column;
+  flex-direction: row;
   display: flex;
   justify-content: space-around;
-  border-style: solid;
-  border-color: #ff751a;
+  flex-wrap: wrap;
   box-sizing: border-box;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -12,7 +11,6 @@ div.photos {
   overflow: hidden;
   padding: 12px;
   border-radius: 5%;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.50);
   color: white;
   align-items: center;
 }
@@ -20,6 +18,10 @@ div.photos {
 div.gallery-container {
     color: white;
     flex: 1;
+}
+
+h1 {
+  text-align: center;
 }
 
 div.photo1 {

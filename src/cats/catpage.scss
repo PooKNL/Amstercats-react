@@ -1,18 +1,22 @@
 
-div.profile-wrapper {
+div.profile-container {
   color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 
 h1.name {
-  margin-left: 80px;
+  margin-top: 50px;
+  margin-right: 750px;
 }
 
 div.profile-article{
+  flex: 1;
 }
 
 div.profile-gallery{
+  flex: 1;
 }
