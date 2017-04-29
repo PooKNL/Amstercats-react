@@ -11,24 +11,24 @@ export class BasicGallery extends PureComponent {
       <div className="gallery-container">
           <h1> Personal photos {name} </h1>
           <div className="photos">
-            <div className="photo1">
-              <img src={ photo1 } />
-            </div>
-            <div className="photo2">
-              <img src={ photo2 } />
-            </div>
-            <div className="photo3">
-              <img src={ photo3 } />
-            </div>
-            <div className="photo4">
-              <img src={ photo4 } />
-            </div>
-            <div className="photo5">
-              <img src={ photo5 } />
-            </div>
-            <div className="photo6">
-              <img src={ photo6 } />
-            </div>
+              <div>
+                <img className="gallery-photo" src={ photo1 } />
+              </div>
+              <div>
+                <img className="gallery-photo" src={ photo2 } />
+              </div>
+              <div>
+                <img className="gallery-photo" src={ photo3 } />
+              </div>
+              <div>
+                <img className="gallery-photo" src={ photo4 } />
+              </div>
+              <div>
+                <img className="gallery-photo" src={ photo5 } />
+              </div>
+              <div>
+                <img className="gallery-photo" src={ photo6 } />
+              </div>
           </div>
       </div>
     )

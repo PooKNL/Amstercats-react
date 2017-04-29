@@ -12,30 +12,34 @@ article.cat {
   overflow: hidden;
   padding: 12px;
   border-radius: 5%;
-  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.50);
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25);
   background-color: lightgrey;
 }
 
-img {
-  max-width: 200px;
-  max-height: 250px;
+#main-profile-photo {
+  max-width: 300px;
+  max-height: 300px;
   border-radius: 5%;
-}
-
-div.header {
-  text-align: center;
+  margin-right: 40px;
+  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25);
 }
 
 footer {
   padding: 10px 20px;
 }
 
-div.stats {
-  align-items: center;
+div.photo-stats {
+  display: column;
+  justify-content: center;
+
 }
 
-div.photo-stats {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
+div.profile-photo {
+  text-align: center;
+  flex: 1;
+}
+
+div.stats {
+  flex: 1;
+  margin-bottom: 40px;
 }

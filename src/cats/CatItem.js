@@ -25,11 +25,9 @@ export class CatItem extends PureComponent {
 
     return(
         <article className="cat">
-          <header>
-            <div className="header">
               <div className="photo-stats">
                 <div className="profile-photo">
-                  <img src={ profilephoto } />
+                  <img id="main-profile-photo" src={ profilephoto } />
                 </div>
                 <div className="stats">
                   <h3> <Link to={`/cats/${_id}`}>{ name }</Link> </h3>
@@ -40,21 +38,17 @@ export class CatItem extends PureComponent {
                   </ul>
                 </div>
               </div>
-
-            </div>
-          </header>
-          <main>
-            <h3> Bio: </h3>
-            <p>{ summary }</p>
-
-          </main>
-          <footer>
-              <LikeButton
-                liked={ liked }
-                // likes={ likedBy.length }
-                onChange={ this.toggleLike.bind(this) }
+              <div className="summary">
+                <h3> Bio: </h3>
+                <p>{ summary }</p>
+              </div>
+              <footer>
+                <LikeButton
+                  liked={ liked }
+                  // likes={ likedBy.length }
+                  onChange={ this.toggleLike.bind(this) }
                 />
-          </footer>
+              </footer>
         </article>
     )
   }
