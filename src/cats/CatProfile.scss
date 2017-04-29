@@ -12,7 +12,6 @@ div.cat {
   flex: 1;
   border-style: solid;
   border-color: #ff751a;
-  box-sizing: border-box;
   flex-basis: 35%;
   max-width: 600px;
   max-height: 350px;
@@ -29,9 +28,7 @@ div.cat {
   background-color: lightgrey;
 }
 
-div.summary {
 
-}
 
 #profilepage-photo {
   max-width: 400px;
@@ -39,14 +36,15 @@ div.summary {
   border-radius: 70%;
   border-style: solid;
   border-color: #ff751a;
-
 }
 
 div.stats {
+  text-align: left;
 }
 
+div.summary {
 
-
+}
 
 footer {
   padding: 10px 20px;
