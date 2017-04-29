@@ -8,7 +8,7 @@ export class WeekCat extends PureComponent {
     return(
         <div className="week-cat">
           <h1> Cat of the week! </h1>
-          <img src='http://res.cloudinary.com/daahasvbo/image/upload/v1490779894/Wally4_xyl8zr.jpg' />
+          <img id="main-profile-photo" src='http://res.cloudinary.com/daahasvbo/image/upload/v1490779894/Wally4_xyl8zr.jpg' />
           <h2> Wally </h2>
         </div>
     )
