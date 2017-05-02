@@ -1,8 +1,8 @@
 .medium-editor-element
   &:focus
     outline: none
-    background-color: #F53240
-
+    border: 1px solid #ff751a
+    border-radius: 10%
 
 .editor
   display: flex
@@ -10,34 +10,42 @@
   margin-bottom: 20px
   width: 90%
   border-radius: .1em
-  border: solid
-  border-color: #ff751a
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.117647), 0 1px 4px rgba(0, 0, 0, 0.117647)
-  background-color: #F53240
   margin: 1em .8em
-  padding: 1em
-  border-radius: 2.5%
+  padding: .5em
 
-  .name,
+  h2
+    margin-left: 65px
+    font-size: 3em
+
   .photo
     font-size: 1.2em
     border: none
     margin-bottom: 0.5em
+    border: 1px solid #ff751a
+    border-radius: 2.5%
+
+  .breed
+    border: 1px solid #ff751a
+    border-radius: 2.5%
 
     &:focus
       outline: none
 
   .name
     font-size: 2em
+    border: 1px solid #ff751a
+    border-radius: 2.5%
 
   .actions
     margin-top: 1em
 
   button
-    border: 1px solid #333
+    border: 1px solid #ff751a
     font-size: 1.2em
     padding: .2em .3em
-    background-color: #fff
+    background-color: #ff751a
+    color: white
+    border-radius: 5%
 
     &:hover
       background-color: #eee
