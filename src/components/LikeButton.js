@@ -6,7 +6,7 @@ import HeartRed from '../images/heart-cat-red.svg'
 class LikeButton extends PureComponent {
   static propTypes = {
     onChange: PropTypes.func.isRequired,
-    // liked: PropTypes.bool.isRequired,
+    liked: PropTypes.bool.isRequired,
   }
 
   classNames() {

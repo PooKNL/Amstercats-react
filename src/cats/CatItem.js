@@ -15,6 +15,8 @@ export class CatItem extends PureComponent {
 
   toggleLike() {
     const { _id, likedBy, currentUser } = this.props
+    if (!currentUser) return
+
     console.log('CLICK (CatItem)', _id)
     this.props.toggleLikeAction({ _id, likedBy }, currentUser)
   }
@@ -25,6 +27,7 @@ export class CatItem extends PureComponent {
 
     return(
         <article className="cat">
+          <header>
               <div className="photo-stats">
                 <div className="profile-photo">
                   <img id="main-profile-photo" src={ profilephoto } />
@@ -38,16 +41,18 @@ export class CatItem extends PureComponent {
                   </ul>
                 </div>
               </div>
+          </header>
+          <main>
               <div className="summary">
                 <h3> Bio: </h3>
                 <p>{ summary }</p>
               </div>
+          </main>
               <footer>
                 <LikeButton
                   liked={ liked }
                   // likes={ likedBy.length }
-                  onChange={ this.toggleLike.bind(this) }
-                />
+                  onChange={ this.toggleLike.bind(this) } />
               </footer>
         </article>
     )
