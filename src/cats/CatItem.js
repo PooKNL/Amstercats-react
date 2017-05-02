@@ -23,7 +23,13 @@ export class CatItem extends PureComponent {
 
 
   render() {
+
+    // console.log(this.props)
     const { _id, name, summary, age, breed, liked, likes, likedBy, profilephoto  } = this.props
+
+    const cat = this.props.cats.filter(function(cat) {
+      return cat._id === _id
+    })[0]
 
     return(
         <article className="cat">
@@ -50,8 +56,8 @@ export class CatItem extends PureComponent {
           </main>
               <footer>
                 <LikeButton
-                  liked={ liked }
-                  // likes={ likedBy.length }
+                  liked={ cat.likedBy.filter((like) => (like === (currentUser && currentUser._id))).length > 0 }
+                  likes={ cat.likedBy.length }
                   onChange={ this.toggleLike.bind(this) } />
               </footer>
         </article>
@@ -59,11 +65,6 @@ export class CatItem extends PureComponent {
   }
 }
 
-const mapStateToProps = ({ currentUser }, { likedBy }) => {
-  return {
-    currentUser,
-    // liked: likedBy.filter((like) => (like === (currentUser && currentUser._id))).length > 0
-  }
-}
+const mapStateToProps = ({ currentUser, cats }) => ({ currentUser, cats })
 
 export default connect(mapStateToProps, { toggleLikeAction })(CatItem)
