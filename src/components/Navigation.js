@@ -6,6 +6,7 @@ import AppBar from 'material-ui/AppBar'
 import IconButton from 'material-ui/IconButton'
 import NavIcon from 'material-ui/svg-icons/maps/navigation'
 import FlatButton from 'material-ui/FlatButton'
+import './Navigation.sass'
 
 export class Navigation extends PureComponent {
   static propTypes = {
@@ -32,8 +33,8 @@ export class Navigation extends PureComponent {
         title="AmsterCats"
         iconElementLeft={<IconButton onClick={this.goHome}><NavIcon /></IconButton>}
         iconElementRight={signedIn ?
-          <FlatButton label="Sign out" onClick={this.signOut.bind(this)} /> :
-          <FlatButton label="Sign up" onClick={this.signUp} />
+          <FlatButton id="signing" label="Sign out" onClick={this.signOut.bind(this)} /> :
+          <FlatButton id="signing" label="Sign up" onClick={this.signUp} />
         }
       />
     )
