@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import signUp from '../actions/user/sign-up'
 import Title from '../components/Title'
 import { Link } from 'react-router'
+import './signUp.sass'
 
 export class SignUp extends PureComponent {
   constructor() {
@@ -109,7 +110,7 @@ export class SignUp extends PureComponent {
 
   render() {
     return (
-      <div className="sign-up form">
+      <div className="sign-up-form">
         <Title content="Sign Up" />
 
         <form onSubmit={this.submitForm.bind(this)}>
@@ -146,7 +147,7 @@ export class SignUp extends PureComponent {
               null
             }
           </div>
-          <Link to="/sign-in">Sign in</Link>
+          <Link className="signup" to="/sign-in">Sign in</Link>
           <input type="submit" value="Sign up" />
         </form>
       </div>
