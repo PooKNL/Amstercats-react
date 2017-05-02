@@ -28,19 +28,15 @@ export class CatItem extends PureComponent {
     return(
         <article className="cat">
           <header>
-              <div className="photo-stats">
-                <div className="profile-photo">
-                  <img id="main-profile-photo" src={ profilephoto } />
-                </div>
-                <div className="stats">
-                  <h3> <Link to={`/cats/${_id}`}>{ name }</Link> </h3>
-                  <ul>
-                    <p> <strong> Age: </strong>  { age }</p>
-                    <p> <strong> Breed: </strong> { breed }</p>
-                    <p> <strong> Origin: </strong> Amsterdam, Netherlands </p>
-                  </ul>
-                </div>
-              </div>
+            <div className="profile-photo">
+              <img id="main-profile-photo" src={ profilephoto } />
+            </div>
+            <h3 id="catname"> <Link to={`/cats/${_id}`}>{ name }</Link> </h3>
+            <div className="stats">
+                <p> <strong> Age: </strong>  { age }</p>
+                <p> <strong> Breed: </strong> { breed }</p>
+                <p> <strong> Origin: </strong> Amsterdam, Netherlands </p>
+            </div>
           </header>
           <main>
               <div className="summary">
@@ -49,10 +45,12 @@ export class CatItem extends PureComponent {
               </div>
           </main>
               <footer>
-                <LikeButton
-                  liked={ liked }
-                  // likes={ likedBy.length }
-                  onChange={ this.toggleLike.bind(this) } />
+                <div id="LikeButton">
+                  <LikeButton
+                    liked={ liked }
+                    // likes={ likedBy.length }
+                    onChange={ this.toggleLike.bind(this) } />
+                </div>
               </footer>
         </article>
     )
