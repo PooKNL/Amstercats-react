@@ -17,6 +17,7 @@ class API {
       }));
   }
 
+// review wouters api rock/paper/scissors game
   service(serviceName) {
     return this.app.service(serviceName)
   }
