@@ -5,12 +5,7 @@ import { Link } from 'react-router'
 import './CatProfile.scss'
 
 export class CatProfile extends PureComponent {
-  static propTypes = {
-    // _id: PropTypes.string.isRequired,
-    // // profilephoto: PropTypes.string.isRequired,
-    // summary: PropTypes.string.isRequired,
-    // toggleLikeAction: PropTypes.func.isRequired,
-  }
+  static propTypes = {}
 
   render() {
     const { _id, name, summary, age, breed, liked, likes, likedBy, profilephoto  } = this.props

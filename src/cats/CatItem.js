@@ -23,9 +23,8 @@ export class CatItem extends PureComponent {
 
 
   render() {
-    // console.log(this.props)
     const { _id, name, summary, age, breed, liked, likes, likedBy, profilephoto, currentUser } = this.props
-
+    
     const cat = this.props.cats.filter(function(cat) {
       return cat._id === _id
     })[0]

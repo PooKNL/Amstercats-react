@@ -23,16 +23,25 @@ export class CatsContainer extends PureComponent {
   }
 
   renderCats(cat, index) {
-    return <CatItem key={index} { ...cat } liked={ false } />
+    return <CatItem key={index} { ...cat } />
+  }
+
+  renderWeekCat() {
+    const { _id, likedBy, currentUser } = this.props
+
+    this.props.renderWeekCat({ _id, likedBy }, currentUser)
   }
 
   render() {
+    const { cat, likedBy, profilephoto, currentUser, _id, cats } = this.props
+    console.log(this.props.cats)
+
     return(
       <div className="page-wrapper">
           <header>
             <div className="intro-week-wrapper">
               < CatIntro />
-              < WeekCat />
+              < WeekCat cats={ cats } />
             </div>
           </header>
           <main>
@@ -54,6 +63,6 @@ export class CatsContainer extends PureComponent {
   }
 }
 
-const mapStateToProps = ( { cats }) => ({ cats })
+const mapStateToProps = ({ cats }) => ({ cats })
 
 export default connect(mapStateToProps, { fetchCats, subscribeToCatsService })(CatsContainer)
