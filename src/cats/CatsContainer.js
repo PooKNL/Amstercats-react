@@ -34,14 +34,17 @@ export class CatsContainer extends PureComponent {
 
   render() {
     const { cat, likedBy, profilephoto, currentUser, _id, cats } = this.props
-    console.log(this.props.cats)
+
+    const weekCat = this.props.cats.filter(function (cat) {
+      return cat.likedBy.length === 2
+    })
 
     return(
       <div className="page-wrapper">
           <header>
             <div className="intro-week-wrapper">
               < CatIntro />
-              < WeekCat cats={ cats } />
+              < WeekCat weekCat={ weekCat } />
             </div>
           </header>
           <main>
