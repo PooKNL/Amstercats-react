@@ -1,5 +1,6 @@
 import React, { PureComponent, PropTypes } from 'react'
 import LikeButton from '../components/LikeButton'
+import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import './CatProfile.scss'
 
@@ -30,6 +31,5 @@ export class CatProfile extends PureComponent {
     )
   }
 }
-
 
 export default CatProfile

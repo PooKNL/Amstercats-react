@@ -26,18 +26,19 @@ export class CatsContainer extends PureComponent {
     return <CatItem key={index} { ...cat } />
   }
 
-  renderWeekCat() {
-    const { _id, likedBy, currentUser } = this.props
+  renderPage(cats)
+    {if(this.props.cats.length > 0) { }}
 
-    this.props.renderWeekCat({ _id, likedBy }, currentUser)
-  }
+
 
   render() {
     const { cat, likedBy, profilephoto, currentUser, _id, cats } = this.props
 
-    const weekCat = this.props.cats.filter(function (cat) {
+    const weekCatArray = this.props.cats.filter(function (cat) {
       return cat.likedBy.length === 2
     })
+
+    const weekCat = weekCatArray[0]
 
     return(
       <div className="page-wrapper">
