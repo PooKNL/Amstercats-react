@@ -6,16 +6,10 @@ export class WeekCat extends PureComponent {
 
   render() {
     const { weekCat, name, profilephoto } = this.props
-    console.log(weekCat)
-
-    if(weekCat) {
-      console.log(weekCat.name)
-      console.log(weekCat.profilephoto)
-    }
 
     return(
       <div className="week-cat">
-            <h1> Cat of the week! </h1>
+            <h1> Cat of the day! </h1>
               {weekCat &&
                 <div className="week-condition">
                   <img id="week-profile-photo" src={ weekCat.profilephoto } />
