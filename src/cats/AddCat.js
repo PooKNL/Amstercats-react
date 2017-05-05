@@ -12,14 +12,11 @@ export class CatProfile extends PureComponent {
 
     return(
       <div className="addcat-wrapper">
-        <h1> Add & or edit your cat profiles here </h1>
+        <h1> Add a AmsterCat profile  </h1>
         <img src="http://res.cloudinary.com/daahasvbo/image/upload/v1493973082/wally-editor_avmbfv.jpg"/>
         <div className="profile-editor">
           <h2> Add a new cat profile!</h2>
           < CatsEditor />
-        </div>
-        <div className="user-cat-profiles">
-          <h2> Edit your cat profiles </h2>
         </div>
       </div>
     )
