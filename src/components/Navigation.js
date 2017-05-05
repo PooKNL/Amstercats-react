@@ -34,7 +34,7 @@ export class Navigation extends PureComponent {
         iconElementLeft={<IconButton onClick={this.goHome}><NavIcon /></IconButton>}
         iconElementRight={signedIn ?
           <FlatButton id="signing" label="Sign out" onClick={this.signOut.bind(this)} /> :
-          <FlatButton id="signing" label="Sign up" onClick={this.signUp} />
+          <FlatButton id="signing" label="Sign in / up" onClick={this.signUp} />
         }
       />
     )
