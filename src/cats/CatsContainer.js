@@ -35,6 +35,7 @@ export class CatsContainer extends PureComponent {
           <header>
             <div className="intro-week-wrapper">
               < CatIntro cats= { cats } />
+              < WeekCat weekCat= { weekCat } />
             </div>
           </header>
           <main>
