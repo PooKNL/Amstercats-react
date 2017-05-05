@@ -2,7 +2,7 @@ import React, { PureComponent, PropTypes } from 'react'
 import LikeButton from '../components/LikeButton'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
-import './CatProfile.scss'
+import './CatProfile.sass'
 
 export class CatProfile extends PureComponent {
   static propTypes = {}

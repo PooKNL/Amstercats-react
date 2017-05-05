@@ -1,6 +1,7 @@
 import React, { PureComponent, PropTypes } from 'react'
 import Title from '../components/Title'
-import './CatIntro.scss'
+import { Link } from 'react-router'
+import './CatIntro.sass'
 
 export class CatIntro extends PureComponent {
   static propTypes = {}
@@ -18,7 +19,7 @@ export class CatIntro extends PureComponent {
                 <li> Enjoy beautiful pictures of other cats </li>
                 <li> And like, like, like! </li>
               </ul>
-                <p> <strong> Sign up, add your cat and enjoy! </strong> </p>
+                <h3 id="cateditor"> <strong> Sign up, <Link to={`/add-cat`}>add your cat</Link> and enjoy! </strong> </h3>
           </div>
     )
   }

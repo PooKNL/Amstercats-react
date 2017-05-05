@@ -3,7 +3,7 @@ import LikeButton from '../components/LikeButton'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import toggleLikeAction from '../actions/cats/toggle-like'
-import './CatItem.scss'
+import './CatItem.sass'
 
 export class CatItem extends PureComponent {
   static propTypes = {
