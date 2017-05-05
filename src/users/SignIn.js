@@ -7,6 +7,7 @@ import RaisedButton from 'material-ui/RaisedButton'
 import FlatButton from 'material-ui/FlatButton'
 import signIn from '../actions/user/sign-in'
 import Title from '../components/Title'
+import './SignIn.sass'
 
 const dialogStyle = {
   width: '400px',
@@ -35,26 +36,28 @@ export class SignIn extends PureComponent {
 
   render() {
     return (
-      <Paper style={ dialogStyle }>
-        <Title content="Sign In" />
+      <div className="sign-in-form">
+        <Paper style={ dialogStyle }>
+          <Title content="Sign In" />
 
-        <form onSubmit={this.submitForm.bind(this)}>
-          <div className="input">
-            <TextField ref="email" type="email" hintText="Email address" />
-          </div>
-          <div className="input">
-            <TextField ref="password" type="password" hintText="Password"  />
-          </div>
-          <FlatButton
-            onClick={ this.signUp }
-            label="Sign up" />
-          <RaisedButton
-            style={ buttonStyle }
-            onClick={ this.submitForm.bind(this) }
-            label="Sign in"
-            primary={true} />
-        </form>
-      </Paper>
+          <form onSubmit={this.submitForm.bind(this)}>
+            <div className="input">
+              <TextField ref="email" type="email" hintText="Email address" />
+            </div>
+            <div className="input">
+              <TextField ref="password" type="password" hintText="Password"  />
+            </div>
+            <FlatButton
+              onClick={ this.signUp }
+              label="Sign up" />
+            <RaisedButton
+              style={ buttonStyle }
+              onClick={ this.submitForm.bind(this) }
+              label="Sign in"
+              primary={true} />
+          </form>
+        </Paper>
+      </div>
     )
   }
 }
