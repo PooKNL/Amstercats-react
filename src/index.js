@@ -10,6 +10,7 @@ import CatsContainer from './cats/CatsContainer'
 import CatPage from './cats/CatPage'
 import SignUp from './users/SignUp'
 import SignIn from './users/SignIn'
+import AddCat from './cats/AddCat'
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -23,6 +24,7 @@ ReactDOM.render(
         <Route path="/cats/:catId" component={CatPage} />
         <Route path="/sign-up" component={SignUp} />
         <Route path="/sign-in" component={SignIn} />
+        <Route path="/add-cat" component={AddCat} />
       </Route>
     </Router>
   </Provider>,

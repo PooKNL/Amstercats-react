@@ -6,7 +6,6 @@ import WeekCat from '../cats/WeekCat'
 import { connect } from 'react-redux'
 import { App } from '../App'
 import subscribeToCatsService from '../actions/cats/subscribe'
-import CatsEditor from '../cats/CatsEditor'
 import fetchCats from '../actions/cats/fetch'
 import './CatsContainer.scss'
 
@@ -47,10 +46,7 @@ export class CatsContainer extends PureComponent {
               <div className="cats-profiles">
                 { this.props.cats.map(this.renderCats) }
               </div>
-              <div className="editor">
-                <h2> Add your own Amstercat </h2>
-                < CatsEditor />
-              </div>
+
             </div>
           </main>
       </div>

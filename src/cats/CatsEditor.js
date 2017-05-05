@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react'
 import Editor from 'react-medium-editor'
 import toMarkdown from 'to-markdown'
+import { link } from 'react-router'
 import { connect } from 'react-redux'
 import createCat from '../actions/cats/create'
 import 'medium-editor/dist/css/medium-editor.css'
