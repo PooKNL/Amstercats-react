@@ -5,7 +5,7 @@ import CatsEditor from '../cats/CatsEditor'
 import CatProfile from '../cats/CatProfile'
 import subscribeToCatsService from '../actions/cats/subscribe'
 import fetchCats from '../actions/cats/fetch'
-import '../cats/AddCat.sass'
+import './AddCat.sass'
 
 export class AddCat extends PureComponent {
   static propTypes = {}
@@ -27,7 +27,6 @@ export class AddCat extends PureComponent {
         <h1> Add a AmsterCat profile  </h1>
         <img src="http://res.cloudinary.com/daahasvbo/image/upload/v1493973082/wally-editor_avmbfv.jpg"/>
         <div className="profile-editor">
-          <h2> Add a new cat profile!</h2>
           < CatsEditor />
         </div>
         <div className="user-cat-profiles">
