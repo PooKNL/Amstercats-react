@@ -1,45 +1,84 @@
-article.cat
-  border-style: solid
-  border-color: #ff751a
-  box-sizing: border-box
-  flex-basis: 35%
-  margin-bottom: 50px
-  margin-right: 80px
-  margin-left: 80px
-  margin-top: 30px
-  color: black
-  text-size: 125%
-  overflow: hidden
-  padding: 12px
-  border-radius: 5%
-  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25)
-  background-color: lightgrey
-  div.profile-photo
+@media (min-width: 40em)
+
+  article.cat
+    border-style: solid
+    border-color: #ff751a
+    flex-basis: 35%
+    margin-bottom: 50px
+    margin-right: 80px
+    margin-left: 80px
+    margin-top: 30px
+    color: black
+    text-size: 125%
+    overflow: hidden
+    padding: 12px
+    border-radius: 5%
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25)
+    background-color: lightgrey
+    div.profile-photo
+      text-align: center
+
+
+    div.stats
+      margin-bottom: 40px
+
+  #main-profile-photo
+    max-width: 300px
+    max-height: 300px
+    border-radius: 5%
+    margin-right: 40px
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625)
+    margin-top: 1em
+
+
+  footer
+    padding: 10px 20px
+    #LikeButton
+      text-align: right
+      font-size: 1.75em
+
+  #catname
     text-align: center
 
 
-  div.stats
-    margin-bottom: 40px
+@media (max-width: 40em)
+
+  article.cat
+    border-style: solid
+    border-color: #ff751a
+    flex: 1
+    margin-bottom: 50px
+    margin-right: 80px
+    margin-left: 80px
+    margin-top: 30px
+    color: black
+    text-size: 125%
+    overflow: hidden
+    padding: 12px
+    border-radius: 5%
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25)
+    background-color: lightgrey
+    div.profile-photo
+      text-align: center
 
 
+    div.stats
+      margin-bottom: 40px
 
-#main-profile-photo
-  max-width: 300px
-  max-height: 300px
-  border-radius: 5%
-  margin-right: 40px
-  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625)
-  margin-top: 1em
-
-
-footer
-  padding: 10px 20px
-  #LikeButton
-    text-align: right
-    font-size: 1.75em
+  #main-profile-photo
+    max-width: 300px
+    max-height: 300px
+    border-radius: 5%
+    margin-right: 40px
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625)
+    margin-top: 1em
 
 
+  footer
+    padding: 10px 20px
+    #LikeButton
+      text-align: right
+      font-size: 1.75em
 
-
-#catname
-  text-align: center
+  #catname
+    text-align: center
