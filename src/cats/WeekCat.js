@@ -1,5 +1,5 @@
 import React, { PureComponent, PropTypes } from 'react'
-import './WeekCat.scss'
+import './WeekCat.sass'
 
 export class WeekCat extends PureComponent {
   static propTypes = {}

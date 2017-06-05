@@ -1,24 +1,52 @@
-div.week-cat {
-  align-items: center;
-  border-style: solid;
-  border-color: #ff751a;
-  box-sizing: border-box;
-  margin-top: 20px;
-  margin-right: 40px;
-  width: 300px;
-  height: 500px;
-  text-size: 125%;
-  overflow: hidden;
-  padding: 12px;
-  border-radius: 5%;
-  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25);
-  color: white;
-  text-align: center;
+@media (max-width: 1024px) {
+  div.week-cat {
+    align-items: center;
+    border-style: solid;
+    border-color: #ff751a;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-right: 40px;
+    width: 300px;
+    height: 500px;
+    text-size: 125%;
+    overflow: hidden;
+    padding: 12px;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25);
+    color: white;
+    text-align: center;
+  }
+
+  #week-profile-photo {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625);
+  }
 }
 
-#week-profile-photo {
-  max-width: 300px;
-  max-height: 300px;
-  border-radius: 5%;
-  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625);
+@media (min-width: 1024px) {
+  div.week-cat {
+    align-items: center;
+    border-style: solid;
+    border-color: #ff751a;
+    box-sizing: border-box;
+    margin-top: 20px;
+    margin-right: 40px;
+    width: 300px;
+    height: 500px;
+    text-size: 125%;
+    overflow: hidden;
+    padding: 12px;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.25);
+    color: white;
+    text-align: center;
+  }
+  #week-profile-photo {
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 5%;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625);
+  }
 }
