@@ -25,7 +25,6 @@ export class AddCat extends PureComponent {
     return(
       <div className="addcat-wrapper">
         <h1> Add a AmsterCat profile  </h1>
-        <img src="http://res.cloudinary.com/daahasvbo/image/upload/v1493973082/wally-editor_avmbfv.jpg"/>
         <div className="profile-editor">
           < CatsEditor />
         </div>

@@ -4,7 +4,7 @@ import fetchCats from '../actions/cats/fetch'
 import Title from '../components/Title'
 import CatProfile from '../cats/CatProfile'
 import BasicGallery from '../components/BasicGallery'
-import './catpage.scss'
+import './catpage.sass'
 
 export class CatPage extends PureComponent {
   static propTypes = {}

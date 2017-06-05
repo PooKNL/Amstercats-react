@@ -1,41 +1,91 @@
-div.photos {
-  flex-direction: row;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  margin-top: 50px;
-  margin-bottom: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
-  overflow: hidden;
-  padding: 12px;
-  border-radius: 5%;
-  color: white;
-  align-items: center;
-}
-
-div.gallery-container {
+@media (min-width: 1024px) {
+  div.photos {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-top: 3.125em;
+    margin-bottom: 0.625em;
+    margin-right: 0.625em;
+    margin-left: 0.625em;
+    overflow: hidden;
+    padding: 0.750em;
+    border-radius: 5%;
     color: white;
+    align-items: center;
+  }
+
+  div.gallery-container {
+      color: white;
+      flex: 1;
+  }
+
+  div.photos {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  img.gallery-photo {
     flex: 1;
-}
+    max-width: 18.75em;
+    max-height: 18.75em;
+    border: solid;
+    border-color: #ff751a;
+    border-radius: 5%;
+  }
 
-div.photos {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-  flex-wrap: wrap;
+  h1 {
+    text-align: center;
+  }
 }
+@media (max-width: 1024px) {
+  div.photos {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    margin-top: 3.125em;
+    margin-bottom: 0.625em;
+    margin-right: 0.625em;
+    margin-left: 0.625em;
+    overflow: hidden;
+    padding: 0.750em;
+    border-radius: 5%;
+    color: white;
+    align-items: center;
+  }
 
-img.gallery-photo {
-  flex: 1;
-  max-width: 300px;
-  max-height: 300px;
-  border: solid;
-  border-color: #ff751a;
-  border-radius: 5%;
-}
+  div.gallery-container {
+      color: white;
+      flex: 1;
+      h1 {
+        font-size: 5em;
+      }
+  }
 
-h1 {
-  text-align: center;
+  div.photos {
+    display: flex;
+    justify-content: space-around;
+    padding: 5em;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  img.gallery-photo {
+    flex: 1;
+    max-width: 18.75em;
+    max-height: 18.75em;
+    border: solid;
+    border-color: #ff751a;
+    border-radius: 5%;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 5em;
+  }
 }
