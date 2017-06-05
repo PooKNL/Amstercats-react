@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import { App } from '../App'
 import subscribeToCatsService from '../actions/cats/subscribe'
 import fetchCats from '../actions/cats/fetch'
-import './CatsContainer.scss'
+import './CatsContainer.sass'
 
 
 export class CatsContainer extends PureComponent {
