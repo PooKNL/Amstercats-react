@@ -1,39 +1,77 @@
-div.profile-wrapper
-  display: flex
-  flex-direction: row
-div.profile-photo
-  flex: 1
-  margin-left: 40px
-div.cat
-  flex: 1
-  border-style: solid
-  border-color: #ff751a
-  flex-basis: 35%
-  max-width: 600px
-  max-height: 350px
-  margin-bottom: 50px
-  margin-right: 80px
-  margin-left: 80px
-  margin-top: 30px
-  color: black
-  text-size: 125%
-  overflow: hidden
-  padding: 12px
-  border-radius: 5%
-  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.125)
-  background-color: lightgrey
+@media (max-width: 1024px)
+  div.profile-wrapper
+    display: flex
+    flex-direction: row
+  div.profile-photo
+    flex: 1
+    margin-left: 2.5em
+  div.cat
+    flex: 1
+    border-style: solid
+    border-color: #ff751a
+    flex-basis: 35%
+    max-width: 37.5em
+    max-height: 21.875em
+    margin-bottom: 3.125em
+    margin-right: 5em
+    margin-left: 5em
+    margin-top: 1.875em
+    color: black
+    text-size: 125%
+    overflow: hidden
+    padding: 0.75em
+    border-radius: 5%
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.125)
+    background-color: lightgrey
 
+  #profilepage-photo
+    max-width: 25em
+    max-height: 21.875em
+    border-radius: 70%
+    border-style: solid
+    border-color: #ff751a
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625)
+  div.stats
+    text-align: left
+  div.summary
 
-#profilepage-photo
-  max-width: 400px
-  max-height: 350px
-  border-radius: 70%
-  border-style: solid
-  border-color: #ff751a
-  box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625)
-div.stats
-  text-align: left
-div.summary
+  footer
+    padding: 0.625em 1.25em
 
-footer
-  padding: 10px 20px
+@media (min-width: 1024px)
+  div.profile-wrapper
+    display: flex
+    flex-direction: row
+  div.profile-photo
+    flex: 1
+    margin-left: 2.5em
+  div.cat
+    flex: 1
+    border-style: solid
+    border-color: #ff751a
+    flex-basis: 35%
+    max-width: 37.5em
+    max-height: 21.875em
+    margin-bottom: 3.125em
+    margin-top: 1.875em
+    color: black
+    text-size: 125%
+    overflow: hidden
+    padding: 0.75em
+    border-radius: 5%
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.125)
+    background-color: lightgrey
+
+  #profilepage-photo
+    max-width: 25em
+    max-height: 21.875em
+    border-radius: 70%
+    border-style: solid
+    border-color: #ff751a
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.0625)
+  div.stats
+    text-align: left
+  div.summary
+
+  footer
+    padding: 0.625em 1.25em
