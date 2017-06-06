@@ -12,10 +12,10 @@ export class CatProfile extends PureComponent {
 
     return(
       <div className="profile-wrapper">
-        <div className="profile-photo">
+        <div className="catpage-profile-photo">
           <img id="profilepage-photo" src={ profilephoto } />
         </div>
-        <div className="cat">
+        <div className="catpage-profile">
               <div className="stats">
                   <h3> <Link to={`/cats/${_id}`}>{ name }</Link> </h3>
                     <p> <strong> Age: </strong>  { age }</p>

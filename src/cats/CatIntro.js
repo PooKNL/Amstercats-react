@@ -10,7 +10,8 @@ export class CatIntro extends PureComponent {
     return(
           <div className="intro-text">
               <Title content="Welcome to the lovely cats of Amsterdam!" />
-              <p> A prototype website for my (mostly female =) ) friends who adore cats. A user can create and modify profiles for their own cats and share pictures with friends. </p>
+              <p>A prototype website for my (mostly female =) ) friends who adore cats. A user can create
+              and modify profiles for their own cats and share pictures with friends.</p>
               <ul>
                 <li> Add your own cat profile to the site </li>
                 <li> Upload pictures of your cat  </li>
