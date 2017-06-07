@@ -23,7 +23,7 @@ export class CatProfile extends PureComponent {
                     <p> <strong> Origin: </strong> Amsterdam, Netherlands </p>
               </div>
               <div className="summary">
-                <h3> Bio: </h3>
+                <h3 id="profile-bio"> Bio: </h3>
                 <p>{ summary }</p>
               </div>
         </div>
