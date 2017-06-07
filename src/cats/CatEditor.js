@@ -47,7 +47,7 @@ class CatEditor extends PureComponent {
     })
   }
 
-  updateIntro(text, medium) {
+  updateSummary(text, medium) {
     this.setState({
       summary: text
     })
@@ -91,7 +91,8 @@ class CatEditor extends PureComponent {
           options={{
             placeholder: {text: 'Write something about your cat...'}
           }}
-          onChange={this.updateIntro.bind(this)}
+          onChange={this.updateSummary.bind(this)}
+          onKeyDown={this.updateSummary.bind(this)}
           text={this.state.summary} />
 
         <input
