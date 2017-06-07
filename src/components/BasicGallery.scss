@@ -21,13 +21,6 @@
       flex: 1;
   }
 
-  div.photos {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   img.gallery-photo {
     flex: 1;
     max-width: 18.75em;
@@ -65,14 +58,6 @@
       h1 {
         font-size: 5em;
       }
-  }
-
-  div.photos {
-    display: flex;
-    justify-content: space-around;
-    padding: 5em;
-    flex-direction: row;
-    flex-wrap: wrap;
   }
 
   img.gallery-photo {
